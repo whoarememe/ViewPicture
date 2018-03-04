@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1152</width>
+    <height>649</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>WenQuanYi Micro Hei Mono</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0,10">
+      <item>
+       <widget class="QListView" name="listView"/>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>3</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget" native="true">
+        <layout class="QGridLayout" name="gridLayout">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QScrollArea" name="scrollArea">
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAsNeeded</enum>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QAbstractScrollArea::AdjustToContents</enum>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>1011</width>
+              <height>501</height>
+             </rect>
+            </property>
+            <widget class="QLabel" name="label">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>10</y>
+               <width>991</width>
+               <height>481</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="pic/pic.qrc">:/pic/background.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1152</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="open_action"/>
+    <addaction name="closePic_action"/>
+    <addaction name="separator"/>
+    <addaction name="closeWin_action"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>查看</string>
+    </property>
+    <addaction name="left_action"/>
+    <addaction name="right_action"/>
+    <addaction name="separator"/>
+    <addaction name="turn_to_left"/>
+    <addaction name="turn_to_right"/>
+    <addaction name="to_big"/>
+    <addaction name="to_small"/>
+    <addaction name="reduction_action"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="movable">
+    <bool>true</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::AllToolBarAreas</set>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="open_action"/>
+   <addaction name="closePic_action"/>
+   <addaction name="closeWin_action"/>
+   <addaction name="left_action"/>
+   <addaction name="right_action"/>
+   <addaction name="turn_to_left"/>
+   <addaction name="turn_to_right"/>
+   <addaction name="to_big"/>
+   <addaction name="reduction_action"/>
+   <addaction name="to_small"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="open_action">
+   <property name="icon">
+    <iconset resource="pic/pic.qrc">
+     <normaloff>:/pic/open.ico</normaloff>:/pic/open.ico</iconset>
+   </property>
+   <property name="text">
+    <string>打开图片</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="closePic_action">
+   <property name="icon">
+    <iconset resource="pic/pic.qrc">
+     <normaloff>:/pic/close.ico</normaloff>:/pic/close.ico</iconset>
+   </property>
+   <property name="text">
+    <string>关闭图片</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="closeWin_action">
+   <property name="icon">
+    <iconset resource="pic/pic.qrc">
+     <normaloff>:/pic/quit.ico</normaloff>:/pic/quit.ico</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="left_action">
+   <property name="icon">
+    <iconset resource="pic/pic.qrc">
+     <normaloff>:/pic/left.ico</normaloff>:/pic/left.ico</iconset>
+   </property>
+   <property name="text">
+    <string>上一张</string>
+   </property>
+   <property name="shortcut">
+    <string>Up</string>
+   </property>
+  </action>
+  <action name="right_action">
+   <property name="icon">
+    <iconset resource="pic/pic.qrc">
+     <normaloff>:/pic/right.ico</normaloff>:/pic/right.ico</iconset>
+   </property>
+   <property name="text">
+    <string>下一张</string>
+   </property>
+   <property name="shortcut">
+    <string>Down</string>
+   </property>
+  </action>
+  <action name="turn_to_left">
+   <property name="icon">
+    <iconset resource="pic/pic.qrc">
+     <normaloff>:/pic/turn_to_left.ico</normaloff>:/pic/turn_to_left.ico</iconset>
+   </property>
+   <property name="text">
+    <string>向左旋转</string>
+   </property>
+  </action>
+  <action name="turn_to_right">
+   <property name="icon">
+    <iconset resource="pic/pic.qrc">
+     <normaloff>:/pic/turn_to_right.ico</normaloff>:/pic/turn_to_right.ico</iconset>
+   </property>
+   <property name="text">
+    <string>向右旋转</string>
+   </property>
+  </action>
+  <action name="to_big">
+   <property name="icon">
+    <iconset resource="pic/pic.qrc">
+     <normaloff>:/pic/big.ico</normaloff>:/pic/big.ico</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+  </action>
+  <action name="to_small">
+   <property name="icon">
+    <iconset resource="pic/pic.qrc">
+     <normaloff>:/pic/small.ico</normaloff>:/pic/small.ico</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+  </action>
+  <action name="reduction_action">
+   <property name="icon">
+    <iconset resource="pic/pic.qrc">
+     <normaloff>:/pic/restore.ico</normaloff>:/pic/restore.ico</iconset>
+   </property>
+   <property name="text">
+    <string>还原</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="pic/pic.qrc"/>
+ </resources>
+ <connections/>
+</ui>

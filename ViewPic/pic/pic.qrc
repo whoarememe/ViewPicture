@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/pic">
+        <file>close.ico</file>
+        <file>open.ico</file>
+        <file>left.ico</file>
+        <file>pic.qrc</file>
+        <file>quit.ico</file>
+        <file>right.ico</file>
+        <file>background.png</file>
+        <file>turn_to_left.ico</file>
+        <file>turn_to_right.ico</file>
+        <file>big.ico</file>
+        <file>small.ico</file>
+        <file>restore.ico</file>
+    </qresource>
+</RCC>
